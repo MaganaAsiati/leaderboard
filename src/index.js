@@ -16,14 +16,15 @@ const getScores = async () => {
 
 const refreshTable = () => {
   table.innerHTML = '';
-  const trContainer = document.createElement('tr');
   const users = [];
   getScores().then((games) => {
     Object.entries(games.result).forEach(([, value]) => {
       users.push(JSON.stringify(value));
+      const trContainer = document.createElement('tr');
       trContainer.innerHTML = `
-        <td>${value.user}: ${value.score}</td>`;
-      table.innerHTML += trContainer.innerHTML;
+      <td>${value.user}</td>
+      <td>${value.score}</td>`;
+      table.appendChild(trContainer);
     });
   });
 };
