@@ -6,7 +6,7 @@ const table = document.getElementById('table');
 
 const BASE_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
-const GAME_ID = '0wmZGRhOtcZ3YyoWhvRi';
+const GAME_ID = 'CHyVgSSlCdeVKzppH4U1';
 
 const getScores = async () => {
   const response = await fetch(`${BASE_URL}games/${GAME_ID}/scores/`);
